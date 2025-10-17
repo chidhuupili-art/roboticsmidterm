@@ -121,7 +121,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   void _onContinue() {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
-      // Store the username in the FinancialData model
       context.read<FinancialData>().setUsername(_usernameController.text);
       context.go('/home');
     }
@@ -377,7 +376,6 @@ class _DepositScreenState extends State<DepositScreen> {
   }
 }
 
-/// A screen for withdrawing funds.
 class WithdrawScreen extends StatefulWidget {
   const WithdrawScreen({super.key});
 
@@ -512,3 +510,4 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
     );
   }
 }
+
